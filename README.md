@@ -13,20 +13,16 @@ It includes:
 ## Directory Structure
 
 .
-├── src
-│   └── main
-│       ├── java
-│       │   └── com
-│       │       ├── model
-│       │       │   ├── ContainerMoveRequest.java
-│       │       │   └── ContainerMoveResponse.java
-│       │       ├── ContainerRoutingApiApplication.java
-│       │       ├── ContainerRoutingController.java
-│       │       └── OptimizationService.java
-│       └── resources
-│           └── application.properties
-├── pom.xml
-├── Task1_Documentation.md
+src-> main-> java-> com -> model-> ContainerMoveRequest.java
+->ContainerMoveResponse.java
+
+src-> main-> java-> com -> ContainerRoutingApiApplication.java
+-> ContainerRoutingController.java
+-> OptimizationService.java
+-> resources
+-> application.properties
+-> pom.xml
+-> Task1_Documentation.md
 
 ## How to Run
 
@@ -48,6 +44,42 @@ It includes:
 - ContainerRoutingController.java - REST controller file
 - OptimizationService.java - Service class file
 
+----------------------------------------------------------------------
+
+# Task 2: Concurrent System Design
+
+## High-Level System Architecture
+
+**Components:**
+- Load Balancer (e.g., AWS ELB)
+- Cache Layer (e.g., Redis)
+- Application Layer (Spring Boot Containers)
+- Database (PostgreSQL)
+- Monitoring Tools (e.g., Prometheus + Grafana)
+
+### Diagram 
+Task 2: Concurrent System Design
+
+### Key Points
+- **Load Balancer** distributes incoming traffic.
+- **Redis Cache** for frequently accessed optimization results.
+- **Database** stores all container movements.
+- **Horizontal Scaling** of Spring Boot instances to handle load.
+
+- **Failure Handling:**
+  - Health checks on instances.
+  - Auto-scaling if CPU/Memory thresholds exceed.
+  - Graceful degradation using fallback mechanisms.
 
 
+# Conclusion
+This backend solution is designed to be highly scalable, responsive, and production-ready for real-world port optimization scenarios.
+
+
+# Author
+**Durga Prasad Abbana**
+
+
+# License
+Open-source for learning and demonstration purposes.
 
