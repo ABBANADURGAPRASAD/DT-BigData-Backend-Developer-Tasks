@@ -12,7 +12,7 @@ It includes:
 
 ## Directory Structure
 
-.
+
 src-> main-> java-> com -> model-> ContainerMoveRequest.java
 ->ContainerMoveResponse.java
 
